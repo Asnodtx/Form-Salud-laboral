@@ -26,9 +26,9 @@ nav {
 
 .pagination li a:hover {
   transition: all 0.25s ease-in;
-  background: #9db2bf;
+  background: #eef2f3;
 }
 
 .pagination li a[aria-current="true"] {
-  background: #526d82;
+  background: #eef2f3;
 }
