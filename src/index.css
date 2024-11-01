@@ -37,46 +37,35 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+select,
+textarea,
 input[type="text"],
 input[type="number"] {
-  font-size: 15px;
-  width: 90%; /* Ancho completo */
-  height: 40px; /* Altura más pequeña para todos los campos */
+  justify-self: center;
+  font-size: 14px;
+  width: 80%; /* Ancho completo */
   outline: none;
-  padding: 10px;
+  padding: 8px;
   border-radius: 10px;
   border: 2px solid #27374d;
   background: transparent;
   margin: 15px 0; /* 10px arriba y abajo */
 }
-
-textarea,
-select {
-  background: transparent;
-  font-size: 15px;
-  width: 95%; /* Ancho completo */
-  height: 50px; /* Altura más pequeña para todos los campos */
-  padding: 10px; /* Espaciado interno más grande */
-  border: 2px solid #27374d;
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-sizing: border-box; /* Para incluir padding y border en el ancho */
-  font-size: 15px; /* Tamaño de fuente para los campos */
-}
 .button-container {
-  display: flex; /* o grid */
+  display: flex;
+  justify-content: center;
 }
 button {
   border: 2px solid #27374d;
   color: black;
-  display: inline-block;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 700;
-  justify-content: center;
   padding: 1em;
-  background-color: transparent;
-  border-radius: 10px; /* Esquinas redondeadas */
-  transition: all 0.25s ease-in;
   margin: 20px auto;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.25s ease-in;
   &:hover {
     background-color: #eef2f3;
   }

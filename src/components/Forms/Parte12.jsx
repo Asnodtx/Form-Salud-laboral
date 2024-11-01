@@ -23,41 +23,43 @@ const Parte12 = ({ step, setStep }) => {
   };
 
   return (
-    <form onSubmit={handlePersonalInfoSubmit} className="form-container">
-      <h1>Factores Ambientales</h1>
-      <div id="arreglo">
-        {FactoresAmbientalesPreguntasArray.map((pregunta, i) => (
-          <CustomSelect
-            key={i}
-            pregunta={pregunta.pregunta}
-            opcionesArray={pregunta.opciones}
-            respuesta={respuestas[i]}
-            setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
-            tipo={pregunta.tipo}
-          />
-        ))}
-      </div>
-      <div className="button-container">
-        <button
-          type="button"
-          className="button"
-          onClick={(e) => {
-            setStep(step - 1);
-          }}
-        >
-          {"atras"}
-        </button>
-        <button
-          type="button"
-          className="button"
-          onClick={(e) => {
-            setStep(step + 1);
-          }}
-        >
-          {"siguiente"}
-        </button>
-      </div>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handlePersonalInfoSubmit}>
+        <h1>Factores Ambientales</h1>
+        <div id="arreglo">
+          {FactoresAmbientalesPreguntasArray.map((pregunta, i) => (
+            <CustomSelect
+              key={i}
+              pregunta={pregunta.pregunta}
+              opcionesArray={pregunta.opciones}
+              respuesta={respuestas[i]}
+              setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
+              tipo={pregunta.tipo}
+            />
+          ))}
+        </div>
+        <div className="button-container">
+          <button
+            type="button"
+            className="button"
+            onClick={(e) => {
+              setStep(step - 1);
+            }}
+          >
+            {"atras"}
+          </button>
+          <button
+            type="button"
+            className="button"
+            onClick={(e) => {
+              setStep(step + 1);
+            }}
+          >
+            {"siguiente"}
+          </button>
+        </div>
+      </form>
+    </div>
   );
 };
 
