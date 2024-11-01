@@ -1,13 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;700&display=swap");
 body {
+  background: radial-gradient(#526d82, #dde6ed);
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+}
+h3 {
+  color: #333;
+  font-size: 18px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 90%; /* Ancho completo */
+  height: 50px; /* Altura más pequeña para todos los campos */
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #9db2bf;
+  background: transparent;
+  margin: 15px 0; /* 10px arriba y abajo */
+}
+
+textarea,
+select {
+  width: 95%; /* Ancho completo */
+  height: 50px; /* Altura más pequeña para todos los campos */
+  padding: 10px; /* Espaciado interno más grande */
+  border: 2px solid #9db2bf;
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-sizing: border-box; /* Para incluir padding y border en el ancho */
+  font-size: 15px; /* Tamaño de fuente para los campos */
+}
+.button-container {
+  display: flex; /* o grid */
+}
+.button {
+  border: 2px solid #9db2bf;
+  color: black;
+  display: inline-block;
+  font-size: 1.2em;
+  font-weight: 700;
+  justify-content: center;
+  padding: 1em;
+  background-color: transparent;
+  border-radius: 10px; /* Esquinas redondeadas */
+  transition: all 0.25s ease-in;
+  margin: 20px auto;
+  &:hover {
+    background-color: #9db2bf;
+  }
 }

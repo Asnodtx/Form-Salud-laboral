@@ -1,9 +1,3 @@
-/*  { pregunta: "Nombre(s):", opciones: [], tipo: "texto" },
-  { pregunta: "Apellidos:", opciones: [], tipo: "texto" },
-  { pregunta: "Fecha:", opciones: [], tipo: "fecha" },
-  { pregunta: "Edad:", opciones: [], tipo: "edad" },
-*/
-
 export default function EmployeeIdentForm() {
   async function handleEmployeeSubmit(evt) {
     evt.preventDefault();
@@ -33,15 +27,10 @@ export default function EmployeeIdentForm() {
         <label style={{ display: "block" }}>{"EMPLEADO"}</label>
 
         <input type="text" name="nombre" placeholder="nombre de empleado" />
-        <hr />
         <input type="text" name="apellidoPaterno" placeholder="paterno" />
-        <hr />
         <input type="text" name="apellidoMaterno" placeholder="materno" />
-        <hr />
         <input type="number" name="edad" placeholder="edad" />
-        <hr />
         <input type="text" name="ide" placeholder="id empresa" />
-        <hr />
         <button type="submit">{"Enviar a Java Spring"}</button>
       </form>
     </div>
