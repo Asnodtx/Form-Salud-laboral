@@ -26,11 +26,23 @@ export default function EmployeeIdentForm() {
       <form id="emp-form" key={"e-f"} onSubmit={(e) => handleEmployeeSubmit(e)}>
         <label style={{ display: "block" }}>{"EMPLEADO"}</label>
 
-        <input type="text" name="nombre" placeholder="nombre de empleado" />
-        <input type="text" name="apellidoPaterno" placeholder="paterno" />
-        <input type="text" name="apellidoMaterno" placeholder="materno" />
-        <input type="number" name="edad" placeholder="edad" />
-        <input type="text" name="ide" placeholder="id empresa" />
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Ingrese nombre del empleado"
+        />
+        <input
+          type="text"
+          name="apellidoPaterno"
+          placeholder="Ingrese el apellido paterno"
+        />
+        <input
+          type="text"
+          name="apellidoMaterno"
+          placeholder="Ingrese el apellido materno"
+        />
+        <input type="number" name="edad" placeholder="Ingrese la edad" />
+        <input type="text" name="ide" placeholder="Ingresar id de la empresa" />
         <button type="submit">{"Enviar a Java Spring"}</button>
       </form>
     </div>

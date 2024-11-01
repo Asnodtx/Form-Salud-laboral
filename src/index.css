@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;700&display=swap");
 body {
-  background: radial-gradient(#526d82, #dde6ed);
+  background: radial-gradient(#f1f6f9, #14274e);
   padding: 0;
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -15,25 +15,38 @@ h3 {
   color: #333;
   font-size: 18px;
 }
+/* Eliminar los spinners en navegadores WebKit (Chrome y Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Eliminar los spinners en Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 input[type="text"],
 input[type="number"] {
+  font-size: 15px;
   width: 90%; /* Ancho completo */
-  height: 50px; /* Altura más pequeña para todos los campos */
+  height: 40px; /* Altura más pequeña para todos los campos */
   outline: none;
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid #9db2bf;
+  border: 2px solid #27374d;
   background: transparent;
   margin: 15px 0; /* 10px arriba y abajo */
 }
 
 textarea,
 select {
+  background: transparent;
+  font-size: 15px;
   width: 95%; /* Ancho completo */
   height: 50px; /* Altura más pequeña para todos los campos */
   padding: 10px; /* Espaciado interno más grande */
-  border: 2px solid #9db2bf;
+  border: 2px solid #27374d;
   border-radius: 10px; /* Esquinas redondeadas */
   box-sizing: border-box; /* Para incluir padding y border en el ancho */
   font-size: 15px; /* Tamaño de fuente para los campos */
@@ -41,8 +54,8 @@ select {
 .button-container {
   display: flex; /* o grid */
 }
-.button {
-  border: 2px solid #9db2bf;
+button {
+  border: 2px solid #27374d;
   color: black;
   display: inline-block;
   font-size: 1.2em;

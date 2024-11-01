@@ -25,10 +25,10 @@ nav {
 }
 
 .pagination li a:hover {
+  transition: all 0.25s ease-in;
   background: #9db2bf;
 }
 
 .pagination li a[aria-current="true"] {
   background: #526d82;
-  color: #f1f1f1;
 }
