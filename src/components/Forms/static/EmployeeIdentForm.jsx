@@ -1,3 +1,32 @@
+// nombre, ide, apellidoMaterno, apellidoPaterno
+
+function EmployeeInput({ labelv, namev, placeholderv }) {
+  const inputStyle = {
+    width: "90%",
+    padding: "10px",
+    margin: "5px 0",
+    fontSize: "14px",
+    boxSizing: "border-box",
+  };
+  const labelStyle = {
+    display: "block",
+    marginBottom: "15px",
+    fontWeight: "bold",
+  };
+
+  return (
+    <div style={{ marginBottom: "15px" }}>
+      <label style={labelStyle}>{labelv}</label>
+      <input
+        style={inputStyle}
+        type="text"
+        name={namev}
+        placeholder={placeholderv}
+      />
+    </div>
+  );
+}
+
 export default function EmployeeIdentForm() {
   async function handleEmployeeSubmit(evt) {
     evt.preventDefault();
@@ -21,30 +50,65 @@ export default function EmployeeIdentForm() {
     // const j = r.json()
     console.log({ ...r });
   }
-  return (
-    <div>
-      <form id="emp-form" key={"e-f"} onSubmit={(e) => handleEmployeeSubmit(e)}>
-        <label style={{ display: "block" }}>{"EMPLEADO"}</label>
 
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Ingrese nombre del empleado"
+  const formStyle = {
+    width: "100%",
+    display: "grid",
+    gridTemplateRows: "repeat(4, 1fr)",
+    gap: "10px",
+  };
+
+  const twoColumns = {
+    width: "95%",
+    justifySelf: "center",
+    display: "grid",
+    gridTemplateColumns: "50% 50%",
+  };
+
+  return (
+    <form
+      id="emp-form"
+      key={"e-f"}
+      onSubmit={(e) => handleEmployeeSubmit(e)}
+      style={formStyle}
+    >
+      <div style={{ width: "100%" }}>
+        <EmployeeInput
+          labelv={"Nombre(s) del empleado"}
+          namev={"nombre"}
+          placeholderv={"nombre(s)"}
         />
-        <input
-          type="text"
-          name="apellidoPaterno"
-          placeholder="Ingrese el apellido paterno"
+      </div>
+
+      <div style={twoColumns}>
+        <EmployeeInput
+          labelv={"apellido paterno"}
+          namev={"apellidoPaterno"}
+          placeholderv={"paterno"}
         />
-        <input
-          type="text"
-          name="apellidoMaterno"
-          placeholder="Ingrese el apellido materno"
+        <EmployeeInput
+          labelv={"apellido Materno"}
+          namev={"apellidoMaterno"}
+          placeholderv={"materno"}
         />
-        <input type="number" name="edad" placeholder="Ingrese la edad" />
-        <input type="text" name="ide" placeholder="Ingresar id de la empresa" />
+      </div>
+
+      <div style={twoColumns}>
+        <EmployeeInput
+          labelv={"edad del empleado"}
+          namev={"edad"}
+          placeholderv={"edad"}
+        />
+        <EmployeeInput
+          labelv={"id empresa"}
+          namev={"ide"}
+          placeholderv={"ide"}
+        />
+      </div>
+
+      <div>
         <button type="submit">{"Enviar a Java Spring"}</button>
-      </form>
-    </div>
+      </div>
+    </form>
   );
 }

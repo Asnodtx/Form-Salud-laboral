@@ -20,16 +20,18 @@ const Parte1 = ({ step, setStep }) => {
       <h1>Datos Descriptivos de la Persona</h1>
       <div id="arreglo">
         <EmployeeIdentForm />
-        {PreguntasArray.map((pregunta, i) => (
-          <CustomSelect
-            key={i}
-            pregunta={pregunta.pregunta}
-            opcionesArray={pregunta.opciones}
-            respuesta={respuestas[i]}
-            setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
-            tipo={pregunta.tipo}
-          />
-        ))}
+        <div className="grid1">
+          {PreguntasArray.map((pregunta, i) => (
+            <CustomSelect
+              key={i}
+              pregunta={pregunta.pregunta}
+              opcionesArray={pregunta.opciones}
+              respuesta={respuestas[i]}
+              setRespuestaFunc={(value) => setRespuestaFunc(i, value)}
+              tipo={pregunta.tipo}
+            />
+          ))}
+        </div>
       </div>
       <div className="button-container">
         <button

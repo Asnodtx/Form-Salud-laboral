@@ -1,4 +1,5 @@
 import React from "react";
+import "./CustomSelect.css";
 import PropTypes from "prop-types";
 
 export default function CustomSelect({
@@ -8,7 +9,7 @@ export default function CustomSelect({
   setRespuestaFunc,
 }) {
   return (
-    <>
+    <div className="g1Item">
       <h3>{pregunta}</h3>
       {opcionesArray.length === 0 ? (
         pregunta.toLowerCase().includes("fecha") ? (
@@ -47,7 +48,7 @@ export default function CustomSelect({
           ))}
         </select>
       )}
-    </>
+    </div>
   );
 }
 
